@@ -1,0 +1,681 @@
+html {
+  background: #476aa3;
+}
+
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  background: #e5e5e5;
+  margin: auto;
+  font-size: 13px;
+}
+
+/*-----main layouts start-----*/
+.header {
+  height: 60px;
+  background: #476aa3;
+}
+
+.mainwrap {
+  padding: 10px;
+  height: auto;
+  overflow: auto;
+  min-height: 100%;
+  background: #eaebff;
+}
+
+/*sidebar {
+  width: 20%;
+  height: auto;
+  overflow: auto;
+  min-height: 100%;
+  background: #e5e5e5;
+  float: left;
+}
+
+.content {
+  width: 80%;
+  height: auto;
+  overflow: auto;
+  min-height: 100%;
+  background: #eaebff;
+  float: right;
+}*/
+
+.footer {
+  clear: both;
+  background: #205493;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px;
+  text-align: center;
+}
+/*-----main layouts end-----*/
+
+/*-----menu icon start-----*/
+.menu {
+  height: 60px;
+  width: 60px;
+  float: left;
+}
+
+.menu:hover {
+  height: 60px;
+  width: 60px;
+  float: left;
+  background: #4286f4;
+}
+
+.menu img {
+  height: 40px;
+  width: 40px;
+  margin: 8px;
+}
+/*-----menu icon end-----*/
+
+/*-----multi level drop down list start-----*/
+.nav, .sub {
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 1000;
+}
+.nav {
+  display: none;
+}
+.menu:hover .nav {
+  display: block;
+} 
+.nav li {
+  background: #476aa3;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 160px;
+}
+.nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.nav li a:hover {
+  background: #4286f4;
+}
+.nav > li {
+  border-right: 1px solid #4286f4;
+  border-bottom: 1px solid #4286f4;
+  position: relative; 
+}
+.sub {
+  position: absolute;
+  display: none;
+}
+.nav > li:hover .sub {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+.sub li {
+  border-top: 1px solid #4286f4;
+}
+/*-----multi level drop down list end-----*/
+
+/*-----logo start-----*/
+.logo {
+  line-height: 60px;
+  text-align: left;
+  width: 500px;
+  float: left;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding: 0 0 0 10px;
+}
+/*-----logo end-----*/
+
+/*-----setting icon start-----*/
+.setting {
+  height: 60px;
+  width: 60px;
+  float: right;
+}
+
+.setting:hover {
+  background-color: #4286f4;
+}
+
+.setting img
+{
+  height: 40px;
+  width: 40px;
+  margin: 8px;
+}
+/*-----setting icon end-----*/
+
+/*-----profile pic start-----*/
+.propic {
+  height: 60px;
+  width: 60px;
+  float: right;
+  background-color: #425c87;
+}
+
+.propic img
+{
+  height: 40px;
+  width: 40px;
+  margin: 8px;
+}
+/*-----profile pic end-----*/
+
+/*-----logged in user start-----*/
+.user {
+  line-height: 15px;
+  text-align: center;
+  width: 180px;
+  float: right;
+  color: #fff;
+  background-color: #425c87;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  padding: 15px 0 0 10px;
+  font-weight: bold;
+}
+
+.user span {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  line-height: 20px;
+  padding-bottom: 10px;
+  padding-top: 0px;
+  font-style: italic;
+}
+/*-----logged in user end-----*/
+
+/*-----Dialog start-----*/
+a {
+  color: #2980B9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3498DB;
+}
+
+#addnew {
+  margin-bottom: 10px;
+  border: 1px solid #DDD;
+  border-radius: 7px;
+  background: #aacbff;
+  color: #2376ff;
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+  float: left;
+  text-align: center;
+}
+
+#addnew:hover {
+  margin-bottom: 10px;
+  border: 1px solid #DDD;
+  border-radius: 7px;
+  background: #2376ff;
+  color: #aacbff;
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+  float: left;
+  text-align: center;
+}
+
+#addnewlabel {
+  margin-bottom: 10px;
+  float: left;
+  height: 23px;
+  line-height: 23px;
+  padding-left: 5px;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  display: none;
+}
+#dialog {
+  position: absolute;
+  top: 16%;
+  left: 35%;
+  width: 30%;
+  border: 4px solid #ccc;
+  background: #fff;
+  display: none;
+}
+#dialog h2 {
+  margin: 0;
+  padding: 8px;
+  background: #ddd;
+  font-size: 17px;
+}
+#dialog h2 span {
+  display: block;
+  float: right;
+  padding: 0 5px;
+  color: #c22;
+  cursor: pointer;
+}
+#dialog form {
+  padding: 20px;
+}
+#dialog form input[type=text] {
+  padding: 6px;
+  width: 90%;
+}
+#dialog form textarea {
+  padding: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 90%;
+  height: 140px;
+}
+#dialog form input[type=submit] {
+  padding: 8px 18px;
+  margin-top: 10px;
+}
+
+/*-----Dialog end-----*/
+
+h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-weight: normal;
+  color: #2376ff;
+}
+
+h1 span {
+  font-size: 15px;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  background-color: #476aa3;
+  float: right;
+  padding: 5px 8px;
+ }
+
+ h1 span.span1 {
+  font-size: 15px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  background-color: #2980B9;
+  float: right;
+  padding: 5px 8px;
+ }
+
+h1 span a {
+  color: #fff;
+ }
+
+h1 span a.edit {
+  font-size: 22px;
+ }
+
+h1 span a:hover {
+  color: #ddd;
+ }
+
+a {
+  color: #2980B9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3498DB;
+}
+
+.info {
+  background: #2980B9;
+  padding: 8px;
+  text-align: right;
+}
+
+.info a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+}
+
+.info a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.sidebar {
+  float: left;
+  width: 240px;
+}
+
+.cats {
+  list-style: none;
+  padding: 0;
+}
+
+.cats li a {
+  display: block;
+  font-size: 15px;
+  padding: 8px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cats li a:hover {
+  background: #efefef;
+}
+
+.main {
+  float: right;
+  width: 660px;
+  background: #fff;
+}
+
+.books {
+  list-style: none;
+  margin: 15px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.books li {
+  width: 190px;
+  text-align: center;
+  height: 240px;
+  float: left;
+  margin: 20px 10px;
+  font-size: 15px;
+}
+
+.books b {
+  display: block;
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+.books i {
+  color: #E74C3C;
+}
+
+a.add-to-cart {
+  font-size: 13px;
+  display: block;
+  background: #1ABC9C;
+  color: #fff;
+  padding: 5px 0;
+  margin: 5px 30px;
+}
+
+a.del {
+  color: #D35400;
+}
+
+.detail {
+  padding: 20px;
+  background: #fff;
+}
+
+.detail .back {
+  float: right;
+}
+
+.detail a.add-to-cart {
+  margin: 0;
+  width: 160px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+table thead { 
+  background: #89b7ff; 
+}
+
+/*-----entry form start-----*/
+.order-form {
+  margin: 0 auto;
+  padding: 15px;
+  border: 2px solid #2376ff;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.order-form h2 {
+  margin: 5px 0 10px 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #2376ff;
+  font-size: 18px;
+  color: #2376ff;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+.entry input[type=text],
+.entry input[type=email],
+.entry input[type=password],
+.entry textarea,
+.entry select {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #84b2ff;
+  padding: 6px;
+  width: 300px;
+  background: #fff;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.entry input[type=text]:focus,
+.entry input[type=email]:focus,
+.entry input[type=password]:focus,
+.entry textarea:focus,
+.entry select:focus {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #005eff;
+  padding: 6px;
+  width: 300px;
+  background: #fff;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+
+
+.entry input[type=radio],
+.entry input[type=checkbox] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.entry textarea {
+  height: 100px;
+}
+
+.entry input[type=submit] {
+  border: 1px solid #84b2ff;
+  padding: 5px 12px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.entry input[type=submit]:hover {
+  border: 1px solid #84b2ff;
+  padding: 5px 12px;
+  margin-right: 10px;
+  background-color: #d1e2ff;
+  border-radius: 5px;
+}
+
+.msg {
+  background: #1ABC9C;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 50px 20px;
+}
+
+.msg a {
+  color: #eee;
+  border-bottom: 1px dotted #fff;
+}
+
+div.error {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 20px;
+  background: #ffd;
+  border: 1px solid #950;
+  color: #950;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+label.error {
+  color: #900;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: -1px;
+}
+
+.search {
+  margin-top: 20px;
+}
+.search input[type=text] {
+  width: 180px;
+  margin-left: 8px;
+}
+.search input[type=submit] {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: transparent url(../images/search.png) no-repeat center center;
+  border: 0 none;
+  padding: 0;
+  margin: 0 0 0 -5px;
+}
+/*-----entry form end-----*/ 
+
+/*
+table {
+  margin: 20px;
+  border-spacing: 1px; 
+  background: #16A085; 
+} 
+
+td { 
+  background: white; 
+  border-collapse: collapse; 
+  padding: 8px;
+} 
+
+th { 
+  color: white;
+  padding: 8px; 
+}
+
+
+.order-form {
+  margin: 20px;
+}
+
+.order-form h2 {
+  margin: 40px 0 10px 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  color: #C0392B;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+input[type=text],
+input[type=password],
+textarea,
+select {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #ddd;
+  padding: 6px;
+  width: 300px;
+  background: #fff;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type=submit] {
+  padding: 10px 24px;
+  margin-right: 10px;
+}
+
+.msg {
+  background: #1ABC9C;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 50px 20px;
+}
+
+.msg a {
+  color: #eee;
+  border-bottom: 1px dotted #fff;
+}
+
+div.error {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 20px;
+  background: #ffd;
+  border: 1px solid #950;
+  color: #950;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+label.error {
+	color: #900;
+	font-size: 13px;
+	font-style: italic;
+	margin-top: -1px;
+}
+
+.search {
+	margin-top: 20px;
+}
+.search input[type=text] {
+	width: 180px;
+	margin-left: 8px;
+}
+.search input[type=submit] {
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	background: transparent url(../images/search.png) no-repeat center center;
+	border: 0 none;
+	padding: 0;
+	margin: 0 0 0 -5px;
+}
